@@ -5,55 +5,88 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>PassGen</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            gap: 3em;
+        }
+        #result{
+            display: flex;
+            flex-direction: column;
+            /*justify-content: space-around;*/
+        }
+        #result p{
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+        }
+        #result p i:hover {
+            color: #26a69a
+        }
+        #result p span:hover {
+            color: #26a69a
+        }
+    </style>
 </head>
 <body>
-<main style="margin: 0 auto">
+<main>
     <h2>Password Generator</h2>
-    <form>
-        <p>
-            <label>
-                <input type="checkbox">
-                <span>lower cases</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input type="checkbox">
-                <span>UPPER CASES</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input type="checkbox">
-                <span>numbers</span>
-            </label>
-        </p>
-        <p>
-            <label>
-                <input type="checkbox">
-                <span>special symbols</span>
-            </label>
-        </p>
-        <h3>Length:</h3>
-        <p>
-            <label>
-                <input type="radio">
-                <span>6</span>
-            </label>
-            <label>
-                <input type="radio">
-                <span>8</span>
-            </label>
-            <label>
-                <input type="radio">
-                <span>10</span>
-            </label>
-        </p>
-        <button>Generate!</button>
-    </form>
-</main>
+    <section>
+        <form id="form">
 
+            <p>
+                <label>
+                    <input type="checkbox" name="lower" checked disabled>
+                    <span>lower cases</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="upper">
+                    <span>UPPER CASES</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="num" checked>
+                    <span>numbers</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="symb">
+                    <span>special symbols</span>
+                </label>
+            </p>
+            <h3>Length:</h3>
+            <p>
+                <label>
+                    <input name="pass_length" type="radio" value="6">
+                    <span>6</span>
+                </label>
+                <label>
+                    <input name="pass_length" type="radio" value="8" checked>
+                    <span>8</span>
+                </label>
+                <label>
+                    <input name="pass_length" type="radio" value="10">
+                    <span>10</span>
+                </label>
+            </p>
+            <button class="btn">Generate!</button>
+        </form>
+        <div id="result"></div>
+    </section>
+
+</main>
 <script src="app.js"></script>
 </body>
 </html>
