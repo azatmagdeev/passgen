@@ -6,6 +6,18 @@ let string = ''
 const resultEl = document.querySelector('#result')
 const form = document.querySelector('#form')
 
+form.addEventListener('change',()=>{
+    string = ''
+    form.lower.checked ? string += lower_cases : null
+    form.upper.checked ? string += upper_cases : null
+    form.num.checked ? string += numbers : null
+    form.symb.checked ? string += symbols : null
+
+    !string?document.querySelector('#form button').classList.add('disabled'):document.querySelector('#form button').classList.remove('disabled')
+})
+
+//todo refactor
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     string = ''
