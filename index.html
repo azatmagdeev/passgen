@@ -7,81 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>PassGen</title>
-    <style>
-        h2 {
-            text-align: center;
-        }
-
-        section {
-            display: flex;
-            justify-content: space-around;
-            gap: 3em;
-        }
-        #result{
-            display: flex;
-            flex-direction: column;
-        }
-        #result p{
-            display: flex;
-            justify-content: space-between;
-            gap: 1em;
-        }
-        #result p i:hover {
-            cursor: pointer;
-            color: #26a69a
-        }
-        #result p span:hover {
-            color: #26a69a
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
 </head>
 <body>
 <main>
-    <h2>Password Generator</h2>
+    <h1>Password Generator</h1>
     <section>
         <form id="form">
+            <div class="form-body">
+                <div>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="lower" checked>
+                            <span>lower cases (abc)</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="upper">
+                            <span>UPPER CASES (ABC)</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="num" checked>
+                            <span>numbers (123)</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="symb">
+                            <span>symbols (!@#)</span>
+                        </label>
+                    </p>
+                </div>
+                <div>
+                    <div class="length">
+                        <p>
+                            <label>
+                                <input name="pass_length" type="radio" value="8">
+                                <span>8 characters</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="pass_length" type="radio" value="10">
+                                <span>10 characters</span>
+                            </label>
 
-            <p>
-                <label>
-                    <input type="checkbox" name="lower" checked>
-                    <span>lower cases</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" name="upper">
-                    <span>UPPER CASES</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" name="num" checked>
-                    <span>numbers</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" name="symb">
-                    <span>special symbols</span>
-                </label>
-            </p>
-            <h3>Length:</h3>
-            <p>
-                <label>
-                    <input name="pass_length" type="radio" value="8">
-                    <span>8</span>
-                </label>
-                <label>
-                    <input name="pass_length" type="radio" value="10" checked>
-                    <span>10</span>
-                </label>
-                <label>
-                    <input name="pass_length" type="radio" value="12">
-                    <span>12</span>
-                </label>
-            </p>
-            <button class="btn">Generate!</button>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="pass_length" type="radio" value="12" checked>
+                                <span>12 characters</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="pass_length" type="radio" value="15">
+                                <span>15 characters</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="btn">Generate!</button>
+            </div>
+
+
         </form>
         <div id="result"></div>
     </section>

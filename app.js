@@ -6,14 +6,14 @@ let string = ''
 const resultEl = document.querySelector('#result')
 const form = document.querySelector('#form')
 
-form.addEventListener('change',()=>{
+form.addEventListener('change', () => {
     string = ''
     form.lower.checked ? string += lower_cases : null
     form.upper.checked ? string += upper_cases : null
     form.num.checked ? string += numbers : null
     form.symb.checked ? string += symbols : null
 
-    !string?document.querySelector('#form button').classList.add('disabled'):document.querySelector('#form button').classList.remove('disabled')
+    !string ? document.querySelector('#form button').classList.add('disabled') : document.querySelector('#form button').classList.remove('disabled')
 })
 
 //todo refactor
@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
 
     const passwords = [];
 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 8; i++) {
         passwords.push(getPassString())
     }
 
@@ -53,9 +53,9 @@ function renderPasswords(passwords) {
         const copy_icon = document.createElement('i')
         copy_icon.textContent = 'content_copy'
         copy_icon.className = 'material-icons'
-        p.append(span,copy_icon)
+        p.append(span, copy_icon)
         resultEl.append(p)
-        copy_icon.addEventListener('click', async()=>{
+        copy_icon.addEventListener('click', async () => {
             await navigator.clipboard.writeText(el)
             copy_icon.textContent = 'check'
         })

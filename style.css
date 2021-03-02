@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+
+section {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+
+}
+
+#result {
+    display: grid;
+    /*flex-direction: column;*/
+}
+
+#result p {
+    display: flex;
+    /*justify-content: space-between;*/
+    gap: 2em;
+}
+
+#result p i:hover {
+    cursor: pointer;
+    color: #26a69a
+}
+
+#result p span:hover {
+    color: #26a69a
+}
+
+#result p span {
+    font-family: monospace;
+}
+
+.form-body {
+    display: flex;
+    gap: 1em;
+}
+
+.form-footer {
+    text-align: center;
+}
