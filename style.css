@@ -9,7 +9,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 #result {
@@ -39,6 +39,10 @@ section {
 .form-body {
     display: flex;
     gap: 1em;
+}
+
+.form-body span{
+    color: black;
 }
 
 .form-footer {
