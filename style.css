@@ -21,7 +21,7 @@ section {
 
 #result p {
     display: flex;
-    gap: 2em;
+    gap: 1em;
 }
 
 #result p i:hover {
