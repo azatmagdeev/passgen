@@ -9,26 +9,23 @@ section {
     justify-content: center;
     align-items: center;
     gap: 3em;
-
 }
 
 #result {
-    display: grid;
-    /*flex-direction: column;*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: center;
+    max-width: 400px;
 }
 
 #result p {
     display: flex;
-    /*justify-content: space-between;*/
     gap: 2em;
 }
 
 #result p i:hover {
     cursor: pointer;
-    color: #26a69a
-}
-
-#result p span:hover {
     color: #26a69a
 }
 
@@ -42,5 +39,6 @@ section {
 }
 
 .form-footer {
+    margin-top: 1em;
     text-align: center;
 }
