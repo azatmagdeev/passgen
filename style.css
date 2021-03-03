@@ -3,25 +3,28 @@ h1 {
 }
 
 section {
-    margin: 1em;
+    margin: 0 1em;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3em;
+    gap: 1em;
 }
 
 #result {
     display: flex;
     flex-wrap: wrap;
-    gap: 3em;
+    /*gap: 1em;*/
     justify-content: center;
     max-width: 400px;
 }
 
 #result p {
     display: flex;
-    gap: 1em;
+    gap: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 #result p i:hover {
