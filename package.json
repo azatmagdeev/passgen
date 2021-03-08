@@ -1,0 +1,22 @@
+{
+  "name": "passgen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azatmagdeev/passgen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azatmagdeev/passgen/issues"
+  },
+  "homepage": "https://github.com/azatmagdeev/passgen#readme",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
+}
