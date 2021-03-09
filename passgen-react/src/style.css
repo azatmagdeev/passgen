@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+}
+
+section {
+    margin: 0 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    /*gap: 1em;*/
+    justify-content: center;
+    max-width: 400px;
+}
+
+#result p {
+    display: flex;
+    gap: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#result p i:hover {
+    cursor: pointer;
+    color: #26a69a
+}
+
+#result p span {
+    font-family: monospace;
+}
+
+.form-body {
+    display: flex;
+    gap: 1em;
+}
+
+.form-body span{
+    color: black;
+}
+
+.form-footer {
+    margin-top: 1em;
+    text-align: center;
+}
