@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Checkbox = (props) => {
+function Checkbox(props) {
     const {checkbox} = props;
     return (
         <p>
