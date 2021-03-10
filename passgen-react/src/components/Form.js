@@ -55,12 +55,12 @@ function Form() {
         console.log('form changed!')
     }
 
-    function submitedForm(e) {
+    function submittedForm(e) {
         e.preventDefault()
     }
 
     return (
-        <form onChange={changedForm} onSubmit={submitedForm}>
+        <form onChange={changedForm} onSubmit={submittedForm}>
             <div className="form-body">
                 <div>
                     {checkboxes.map(o => <Checkbox key={o.name} checkbox={o}/>)}

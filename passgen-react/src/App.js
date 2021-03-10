@@ -1,30 +1,24 @@
 import './style.css';
 import Form from "./components/Form";
 import Result from "./components/Result";
-import React, {Component} from "react";
+import React,{useState} from "react";
 
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            passwords: [
-                '111', '222', '333'
-            ]
-        }
-    }
+function App() {
 
-    render() {
-        return (
-            <div className="App">
-                <h1>Password Generator</h1>
-                <section>
-                    <Form/>
-                    <Result passwords={this.state.passwords}/>
-                </section>
-            </div>
-        );
-    }
+    const [passwords] = useState([
+        '111', '222', '333'
+    ]);
+
+    return (
+        <div className="App">
+            <h1>Password Generator</h1>
+            <section>
+                <Form/>
+                <Result passwords={passwords}/>
+            </section>
+        </div>
+    )
 }
 
 export default App;
