@@ -4,38 +4,38 @@ import Radio from "./Radio";
 import {init_checkboxes, passwords_count, radios} from "../app-config";
 
 
-export default function Form() {
-
-    const [length, setLength] = useState(12)
+export default function Form(props) {
+    const {setPasswords} = props;
+    const [length, setLength] = useState(12);
     const [checkboxes, setCheckboxes] = useState(init_checkboxes);
 
-    function handleFormChange(event) {
+    function handleFormChange() {
         const form = document.querySelector('#form');
-
         setLength(Number(form['pass_length'].value));
-
         setCheckboxes(
-            checkboxes.map(
-                checkbox => {
-                    checkbox.checked = form[checkbox.name].checked
-                    return checkbox
-                }
-            )
-        )
+            checkboxes.map(checkbox => {
+                checkbox.checked = form[checkbox.name].checked;
+                return checkbox
+            })
+        );
+        !generateString()
+            ?form.querySelector('button').classList.add('disabled')
+            :form.querySelector('button').classList.remove('disabled')
+    }
+
+    function generateString(){
+        return checkboxes.map(
+            checkbox => checkbox.checked ? checkbox.string : ''
+        ).join('');
     }
 
     function handleFormSubmit(e) {
-        e.preventDefault()
-
-        const string = checkboxes.map(
-            checkbox => checkbox.checked ? checkbox.string : ''
-        ).join('')
-
+        e.preventDefault();
+        const string = generateString();
         const passwords = Array(passwords_count).fill('').map(
             () => generatePassword(string, length)
-        )
-
-        console.log(passwords)
+        );
+        setPasswords(passwords)
     }
 
     return (
@@ -53,7 +53,6 @@ export default function Form() {
             </div>
         </form>
     );
-
 }
 
 function generatePassword(string, length) {

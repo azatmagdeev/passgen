@@ -1,4 +1,4 @@
-export const passwords_count = 2;
+export const passwords_count = 8;
 
 export const radios = [
     {
@@ -48,6 +48,6 @@ export const init_checkboxes = [
         checked: false,
         string: '!@#$%^&*(){}[]_-+=?><:;~'
     },
-]
+];
 
 

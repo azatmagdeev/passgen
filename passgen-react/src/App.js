@@ -7,15 +7,13 @@ import Test from './components/Test'
 
 function App() {
 
-    const [passwords] = useState([
-        '111', '222', '333'
-    ]);
+    const [passwords,setPasswords] = useState([]);
 
     return (
         <div className="App">
             <h1>Password Generator</h1>
             <section>
-                <Form/>
+                <Form setPasswords={setPasswords}/>
                 <Result passwords={passwords}/>
             </section>
         </div>
