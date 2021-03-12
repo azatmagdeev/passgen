@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Radio(props) {
-    const {radio,setLength} = props;
+    const {radio} = props;
     return (
         <p>
             <label>
