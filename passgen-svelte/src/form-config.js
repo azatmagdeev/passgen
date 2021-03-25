@@ -25,6 +25,12 @@ export const checkboxes = [
         checked: false,
         string: '!@#$%^&*(){}[]_-+=?><:;~'
     },
+    {
+        name: 'cyril',
+        info: 'cyrilic (абв)',
+        checked: false,
+        string: 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+    },
 ];
 
 export const radios = [
@@ -46,6 +52,11 @@ export const radios = [
     {
         value: 15,
         info: '15 characters',
+        checked: false
+    },
+    {
+        value: 20,
+        info: '20 characters',
         checked: false
     },
 ];
