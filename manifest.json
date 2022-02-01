@@ -1,25 +1,30 @@
 {
-  "short_name": "PassGen App",
-  "name": "Password Generator Online",
+  "short_name": "PassGen",
+  "name": "Генератор Паролей",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "icons/favicon.ico",
       "sizes": "16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "icons/favicon.png",
       "sizes": "120x120",
       "type": "image/png"
     },
     {
-      "src": "favicon144.png",
+      "src": "icons/favicon144.png",
       "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#26a69a",
   "background_color": "#ffffff"
 }
