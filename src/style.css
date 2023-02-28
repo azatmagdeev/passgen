@@ -1,0 +1,79 @@
+h1 {
+    text-align: center;
+}
+
+#root {
+    margin: 1em auto;
+}
+
+section {
+    margin: 0 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+}
+
+#result p {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    min-width: 120px;
+}
+
+#result p input {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#result p:hover img,
+#result p:hover input{
+    cursor: pointer;
+    color: #26a69a
+}
+
+.form-body {
+    display: flex;
+    gap: 1em;
+}
+
+.form-body span{
+    color: black;
+}
+
+.form-footer {
+    margin-top: 1em;
+    text-align: center;
+}
+
+
+#result .result__item {
+    font-family: monospace, monospace;
+    border: none;
+    height: 1em;
+}
+
+article {
+    max-width: 400px;
+    margin: 1em auto;
+    padding: 0 1em;
+}
+
+@media (min-width: 900px){
+    main {
+        display: flex;
+        justify-content: center;
+    }
+}
+

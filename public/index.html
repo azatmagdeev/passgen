@@ -1,43 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="ru">
+
+<head>
     <meta charset="utf-8" />
+    <!--suppress HtmlUnknownTarget -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!--suppress HtmlUnknownTarget -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#26a69a" />
+    <meta name="description" content="Генератор Паролей Онлайн. Подобрать новый сложный пароль." />
+    <meta name="yandex-verification" content="763dc1a1b0a0ac59" />
+    <meta name="google-site-verification" content="57B7Bz2GGMlRp6C8NpKF89eY3tqZC7Cf4Cw2NHWag9c" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--suppress HtmlUnknownTarget -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Password Generator</title>
+    <!-- Yandex.Metrika counter -->
+    <!--suppress CommaExpressionJS -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        ym(84081925, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/84081925" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+    <noscript>Чтобы воспользоваться генератором паролей, включите JavaScript в браузере.</noscript>
+    <h1>Генератор Паролей</h1>
+    <main>
+        <div id="root">
+            <section>
+                <form id="form">
+                    <div class="form-body">
+                        <div>
+                            <p><label><input type="checkbox" name="en" checked=""><span>строчные (abc)</span></label>
+                            </p>
+                            <p><label><input type="checkbox" name="EN" checked=""><span>Заглавные (ABC)</span></label>
+                            </p>
+                            <p><label><input type="checkbox" name="num" checked=""><span>цифры (123)</span></label></p>
+                            <p><label><input type="checkbox" name="symb"><span>символы (!@#)</span></label></p>
+                        </div>
+                        <div>
+                            <p><label><input name="pass_length" type="radio" value="8" checked=""><span>8
+                                        знаков</span></label></p>
+                            <p><label><input name="pass_length" type="radio" value="10"><span>10 знаков</span></label>
+                            </p>
+                            <p><label><input name="pass_length" type="radio" value="15"><span>15 знаков</span></label>
+                            </p>
+                            <p><label><input name="pass_length" type="radio" value="20"><span>20 знаков</span></label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-footer"><button class="btn"><b>Сгенерировать!</b></button></div>
+                </form>
+                <div id="result">
+                    <p><label><input class="result__item" readonly="" value="ZPQOyz6A" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="PaKd2QvV" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="RkSdbz62" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="445r2X16" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="ko8CXBcw" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="u67Gs2Nc" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="62gIPWQO" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                    <p><label><input class="result__item" readonly="" value="oz38Z14D" style="width: 8ch;"></label><img
+                            src="icons/copy.svg" alt="копировать!" title="копировать!"></p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
 </html>
