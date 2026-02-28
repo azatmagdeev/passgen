@@ -2,7 +2,7 @@ import '../style.css';
 import Form from "./Form";
 import Result from "./Result";
 import React, {useState} from "react";
-import {generatePasswords} from "../lib/functions";
+import {generatePasswords, generateReadablePasswords} from "../lib/functions";
 
 
 /**
@@ -12,7 +12,7 @@ import {generatePasswords} from "../lib/functions";
  */
 function App() {
 
-    const [passwords, setPasswords] = useState(generatePasswords());
+    const [passwords, setPasswords] = useState(generateReadablePasswords());
 
     return (
         <section>
