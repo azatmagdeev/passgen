@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import Checkbox from "./Checkbox"
 import Radio from "./Radio"
 import {init_checkboxes, init_radios} from "../lib/app-config"
@@ -15,14 +15,10 @@ export default function Form(props) {
     const [radios] = useState(init_radios)
     const [checkboxes] = useState(init_checkboxes)
 
-    useEffect(() => {
-        handleFormChange()
-    }, [])
-
     /**
      * Обработка изменения полей формы
      */
-    function handleFormChange() {
+    const handleFormChange = useCallback(() => {
         const form = document.querySelector('#form')
         const readableMode = form.readable?.checked
 
@@ -49,7 +45,11 @@ export default function Form(props) {
         }
 
         form.querySelector('button').click()
-    }
+    }, [checkboxes, radios])
+
+    useEffect(() => {
+        handleFormChange()
+    }, [handleFormChange])
 
     /**
      * обработка нажатия кнопки
