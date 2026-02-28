@@ -1,6 +1,6 @@
 {
   "short_name": "PassGen",
-  "name": "Генератор Паролей",
+  "name": "Password Generator",
   "icons": [
     {
       "src": "icons/favicon.ico",
