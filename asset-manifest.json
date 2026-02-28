@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.1099025b.css",
-    "main.js": "/static/js/main.06a97656.js",
-    "index.html": "/index.html",
-    "main.1099025b.css.map": "/static/css/main.1099025b.css.map",
-    "main.06a97656.js.map": "/static/js/main.06a97656.js.map"
+    "main.css": "/passgen/static/css/main.1099025b.css",
+    "main.js": "/passgen/static/js/main.06a97656.js",
+    "index.html": "/passgen/index.html",
+    "main.1099025b.css.map": "/passgen/static/css/main.1099025b.css.map",
+    "main.06a97656.js.map": "/passgen/static/js/main.06a97656.js.map"
   },
   "entrypoints": [
     "static/css/main.1099025b.css",
