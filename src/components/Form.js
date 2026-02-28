@@ -78,7 +78,7 @@ export default function Form(props) {
                 <p>
                     <label>
                         <input type="checkbox" name="readable" defaultChecked={true}/>
-                        <span>читаемый формат</span>
+                        <span>readable format</span>
                     </label>
                 </p>
             </div>
@@ -91,7 +91,7 @@ export default function Form(props) {
                 </div>
             </div>
             <div className="form-footer">
-                <button className="btn"><b>Сгенерировать!</b></button>
+                <button className="btn"><b>Generate!</b></button>
             </div>
         </form>
     );

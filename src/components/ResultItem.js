@@ -33,8 +33,8 @@ function ResultItem(props) {
                        readOnly/>
             </label>
             <img src={password.copied ? "icons/done.svg" : "icons/copy.svg"}
-                 alt={password.copied ? "готово!" : "копировать!"}
-                 title={password.copied ? "готово!" : "копировать!"}
+                 alt={password.copied ? "done!" : "copy!"}
+                 title={password.copied ? "done!" : "copy!"}
                  onClick={copyPassword} />
         </p>
     )
